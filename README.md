@@ -1,4 +1,36 @@
 [![you can get this shield at shields.io](https://img.shields.io/discord/771052481538031637?color=7289da&logo=discord&logoColor=white)](https://discord.gg/TXhCJRbFFt)            ![GitHub](https://img.shields.io/github/license/PierreMasselot1/Material-Switching-Unit) [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCF2tb5Hu6G_z-tB3_e_9U4A?style=social)](https://www.youtube.com/channel/UCF2tb5Hu6G_z-tB3_e_9U4A)   
+
+Устройство замены филамента для печати различными пластиками и многоцветной печати.
+
+Модификация для принтера **FlyingBear Reborn 2**.
+
+Исходное оборудование и модификации:
+* экструдер BIQU H2 V2S
+* обдув модели 1x5015
+* wi-fi модуль удален
+* моторы X и Y перевернуты
+* материнская плата MKS Robin Nano 3.2 (STM32F407VET6)
+* драйвер шаговых двигателей - TMC 2209
+* датчик BLTouch (выравнивание UBL по 12x12)
+* парковка Z по концевым выключателям.
+* парковка X по XMAX
+* доступная область печати 320x320x350мм
+
+Для установки MSU требуется:
+  * еще один драйвер шагового двигателя
+  * поменять подключение шаговых моторов (без этого перестает работать мотор Z2 во время печати)
+    * E0 -> E2
+    * E1 -> E0
+    * E2 -> E1
+  * сервопривод для MSU
+  * сервопривод для резчика филамента, в случае его использования
+
+Сервопривод подключается к контактам:
+   * PC3
+   * PC2
+     
+Можно подключить на другие, но возможна нестабильная работа - дрожжание, поворот на неверный угол.
+
 # Material Switching Unit (MSU)
 
 The Material Switching Unit is a multi-material upgrade for 3D printers based on the MMU2 that allows printing of up to 5 filaments while staying under 80$ and being compatible with most FDM 3D printers out there.
