@@ -9,3 +9,6 @@
 	branch = master
 [submodule "https://github.com/PierreMasselot1/Marlin"]
 	branch = bugfix-2.0.x
+[submodule "Marlin-MSU"]
+	path = Marlin-MSU
+	url = https://github.com/rozhkovets/Marlin-MSU
