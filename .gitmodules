@@ -1,14 +1,4 @@
-[submodule "Marlin"]
-	path = Marlin
-	url = https://github.com/PierreMasselot1/Marlin
-[submodule "klipper-MSU"]
-	path = klipper-MSU
-	url = https://github.com/PierreMasselot1/klipper-MSU
-	branch = master
 [submodule "https://github.com/PierreMasselot1/klipper-MSU"]
 	branch = master
 [submodule "https://github.com/PierreMasselot1/Marlin"]
 	branch = bugfix-2.0.x
-[submodule "Marlin-MSU-Reborn2"]
-	path = Marlin-MSU-Reborn2
-	url = https://github.com/rozhkovets/Marlin-MSU
