@@ -5,3 +5,4 @@
 [submodule "Marlin-MSU"]
 	path = Marlin-MSU
 	url = https://github.com/rozhkovets/Marlin-MSU
+	branch = Marlin-bugfix-2.1.x
