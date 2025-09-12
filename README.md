@@ -46,6 +46,20 @@ ____________________
 |  Z2 | E1-motor  | E0-motor |
 |  MSU E |   | E2-motor |
 
+
+
+|  Motor  |  Origin port  |  MSU  |
+| ------------- | ------------- | ------------- |
+| X | X Motor| X Motor |
+| Y | Y Motor |Y Motor|
+|Z1| Z1 Motor| Z1 Motor|
+| E |E0 Motor |
+| E1-motor |
+|  Z2 | E1-motor  | E0-motor |
+|  MSU E |   | E2Motor |
+
+
+
 4. Compile the firmware with the necessary settings and install the firmware..
 5. Be prepared for problems
 
