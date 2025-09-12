@@ -39,22 +39,11 @@ ____________________
 
 |  Motor  |  Origin port  |  MSU  |
 | ------------- | ------------- | ------------- |
-|  X  |  X-motor  | X-motor |
-|  Y  |  Y-motor  | Y-motor |
-|  Z1 | Z1-motor  | Z1-motor |
-|  E  | E0-motor  | E1-motor |
-|  Z2 | E1-motor  | E0-motor |
-|  MSU E |   | E2-motor |
-
-
-
-|  Motor  |  Origin port  |  MSU  |
-| ------------- | ------------- | ------------- |
-| X | X Motor| X Motor |
-|Y| Y Motor |Y Motor|
-|Z1| Z1 Motor| Z1 Motor|
-| E |E0 Motor |E1-motor |
-|  Z2 | E1-motor  | E0-motor |
+|  X  |  X Motor | X Motor |
+|  X  |  Y Motor | Y Motor |
+|  Z1 | Z1 Motor | Z1 Motor |
+|  E  | E0 Motor | E1-motor |
+|  Z2 | E1-motor | E0-motor |
 |  MSU E |   | E2Motor |
 
 
