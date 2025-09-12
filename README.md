@@ -37,14 +37,14 @@ ____________________
 2. Gather
 3. Connect the motors according to the table.
 
-|  Motor  |  Origin port  |  MSU  |
+|Motor|  Original Motor  | MCU Add|
 | ------------- | ------------- | ------------- |
-|  X  |  X Motor | X Motor |
-|  y  |  Y Motor | Y Motor |
-|  Z1 | Z1 Motor | Z1 Motor |
-|  E  | E0 Motor | E1-motor |
-|  Z2 | E1-motor | E0-motor |
-|  MSU E |   | E2Motor |
+|  X Motor  |  X Motor | X Motor |
+|  Y Motor  |  Y Motor | Y Motor |
+|  Z1 Motor | Z1 Motor | Z1 Motor |
+|  E0 Motor  | E0 Motor | E1-motor |
+|  Z2 | E1 Motor| E0-motor |
+|  MSU E |   | E2 Motor |
 
 
 
