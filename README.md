@@ -19,7 +19,7 @@ Initial condition of the equipment and modifications:
 * Parking Z by limit switches
 * Print area  300x300x350mm 
 
-In addition to [the list](https://github.com/rozhkovets/Material-Switching-Unit_FB_Reborn2/blob/main/Build_guide_MSU.md#parts-required) требуемого оборудования требуется:
+In addition to [the list](https://github.com/rozhkovets/Material-Switching-Unit_FB_Reborn2/blob/main/Build_guide_MSU.md#parts-required) required equipment is needed:
   * another stepper motor driver
   * change the connection of the stepper motors (without this, the Z2 motor stops working during printing)
     * E0 -> E1
@@ -39,10 +39,10 @@ ____________________
 
 |Motor|  Original Motor  | MCU Add|
 | ------------- | ------------- | ------------- |
-|  X Motor  |  X Motor | X Motor |
-|  Y Motor  |  Y Motor | Y Motor |
-|  Z1 Motor | Z1 Motor | Z1 Motor |
-|  E0 Motor  | E0 Motor | E1-motor |
+|  X   |  X Motor | X Motor |
+|  Y   |  Y Motor | Y Motor |
+|  Z1  | Z1 Motor | Z1 Motor |
+|  E0   | E0 Motor | E1-motor |
 |  Z2 | E1 Motor| E0-motor |
 |  MSU E |   | E2 Motor |
 
