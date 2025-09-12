@@ -37,7 +37,7 @@ ____________________
 2. Gather
 3. Connect the motors according to the table.
 
-|Motor|  Original Motor  | MCU Add|
+|Motor|  Original Port  | MCU |
 | ------------- | ------------- | ------------- |
 |  X   |  X Motor | X Motor |
 |  Y   |  Y Motor | Y Motor |
