@@ -1,41 +1,41 @@
 [![you can get this shield at shields.io](https://img.shields.io/discord/771052481538031637?color=7289da&logo=discord&logoColor=white)](https://discord.gg/TXhCJRbFFt)            ![GitHub](https://img.shields.io/github/license/PierreMasselot1/Material-Switching-Unit) [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCF2tb5Hu6G_z-tB3_e_9U4A?style=social)](https://www.youtube.com/channel/UCF2tb5Hu6G_z-tB3_e_9U4A)   
 
-Устройство замены филамента для печати различными пластиками и многоцветной печати.
+Filament replacement device for printing with various plastics and multi-color printing.
 
-Модификация для принтера **FlyingBear Reborn 2**.
-небольшой гайд и [обзор](https://rozhkovets-home.ru/?p=464)
+Modification for the printer **FlyingBear Reborn 2**.
+A small guide and [overview](https://rozhkovets-home.ru/?p=464)
 
-обсудить можно [здесь](https://t.me/+KcA09gXNElsxNDQy)
+It can be discussed [here](https://t.me/+KcA09gXNElsxNDQy)
 
-Исходное состояние оборудования и модификации:
-* экструдер BIQU H2 V2S
-* обдув модели 1x5015
-* wi-fi модуль удален
-* моторы X и Y перевернуты
-* материнская плата MKS Robin Nano 3.2 (STM32F407VET6)
-* дисплей MKS mini 12864 V3.0
-* драйвер шаговых двигателей - TMC 2209
-* датчик BLTouch (выравнивание UBL по 12x12)
-* парковка Z по концевым выключателям
-* доступная область печати ~300x300x350мм 
+Initial condition of the equipment and modifications:
+* BIQU H2 V2S extruder
+* Blower model 1x5015
+* Wi-Fi module removed
+* Drivess X and Y are inverted
+* Motherboard MKS Robin Nano 3.2 (STM32F407VET6)
+* Display MKS mini 12864 V3.0
+* Stepper motor driver - TMC 2209
+* BLTouch sensor (UBL alignment 12x12)
+* Parking Z by limit switches
+* Print area  300x300x350mm 
 
-В дополнение к [списку](https://github.com/rozhkovets/Material-Switching-Unit_FB_Reborn2/blob/main/Build_guide_MSU.md#parts-required) требуемого оборудования требуется:
-  * еще один драйвер шагового двигателя
-  * поменять подключение шаговых двигателей (без этого перестает работать мотор Z2 во время печати)
+In addition to [the list](https://github.com/rozhkovets/Material-Switching-Unit_FB_Reborn2/blob/main/Build_guide_MSU.md#parts-required) требуемого оборудования требуется:
+  * another stepper motor driver
+  * change the connection of the stepper motors (without this, the Z2 motor stops working during printing)
     * E0 -> E1
     * E1(Z2) -> E0
-    * шаговый двигатель MSU подключается в E2  
-  * сервопривод для резчика филамента, в случае его использования
-  * датчик наличия движения филамента(BTT SFS или им подобные) **(крайне рекомендуется)**
+    * The stepper motor MSU is connected in E2. 
+  * servo drive for the filament cutter, in case it is used
+  * filament presence sensor (BTT SFS or similar) **(highly recommended)**
 
-Сервоприводы подключаются к контактам:
+The servos are connected to the contacts:
    * PC3
    * PC2
-   * Можно подключить на другие, но возможна нестабильная работа - дрожжание, поворот на неверный угол.
+   * It can be connected to others, but unstable operation is possible - flickering, turning at an incorrect angle..
 ____________________
-1. Распечатейте необходимые [детали](https://github.com/rozhkovets/Material-Switching-Unit_FB_Reborn2/tree/main/parts/Reborn2) 
-2. Соберите
-3. Подключите моторы в соответствии с таблицей
+1. Print the necessary [parts](https://github.com/rozhkovets/Material-Switching-Unit_FB_Reborn2/tree/main/parts/Reborn2) 
+2. Gather
+3. Connect the motors according to the table.
 
 | Motor | Origin port | MSU |
 | ------------- | ------------- | ------------- |
@@ -46,17 +46,17 @@ ____________________
 | Z2 | E1-motor  | E0-motor |
 | MSU E |   | E2-motor |
 
-4. Скомпилируйте прошивку с необходимыми настройками и установите прошивку.
-5. Будьте готовы к проблемам
+4. Compile the firmware with the necessary settings and install the firmware..
+5. Be prepared for problems
 
-**Частые проблемы:**
-  * Мотор MSU не может протолкнуть филамент - Увеличьте или уменьшите прижим. Большой ток для мотора не требуется. Будет лучше, если при застревании мотор начнет пропускать шаги, а не грызть филамент.
-  * Филамент застревает в сплиттере при входе в ptfe-трубку - Развальцуйте ножом вход в ptfe-трубку. Слегка выкрутить или извлеките трубку из сплиттера. Измените угол резки филамента.
-  * Филамент застревает при входе в фиттинг - Используйте другой фитинг. Измените угол резки филамента.
-  * Филамент застревает в датчике движения филамента BTT SFS - Изменить угол резки филамента. Изменить угол входа филамента в канал датчика. Рассверлить выходной канал с 2 до 3 мм, сделать небольшую фаску на входке в канал. Страдать.
-  * Филамент застревает при входе в резак - Расширьте отверстие сверлом. Сдвинте в сторону датчик движения филамента, подложив шайбы. (Мне было достаточно сдвинуть на 1 мм). Измените угол резки филамента. Изменить угол входа филамента.
-  * Филамент не отрезается резчиком - Замените лезвие. Увеличьте количество попыток резки.
-  * Филамент застревает при входе экструдер - Измените угол резки филамента. Модернизируйте свой biqu h2 v2 установив ptfe-трубку между шестерянми, чтобы уменьшить зазоры, [инструкция](https://m.youtube.com/watch?v=L_tcQAx7UfE).
+**Frequent problems:**
+  * The MSU motor cannot push the filament - Increase or decrease the pressure. A large current for the motor is not required. It would be better if the motor starts skipping steps when it gets stuck, rather than grinding the filament.
+  * The filament gets stuck in the splitter when entering the ptfe tube - Deburr the entrance to the ptfe tube with a knife. Slightly twist or remove the tube from the splitter. Change the angle of cutting the filament.
+  * The filament gets stuck when entering the fitting - Use another fitting. Change the angle of the filament cut.
+  *The filament gets stuck in the BTT SFS filament motion sensor - Change the cutting angle of the filament. Change the angle of the filament entering the sensor channel. Ream the output channel from 2 to 3 mm, create a small chamfer at the entrance to the channel. Suffer.
+  * The filament gets stuck at the entrance to the cutter - enlarge the hole with a drill. Shift the filament motion sensor sideways by inserting washers. (Shifting it by 1 mm was enough for me). Change the angle of the filament cutting. Change the angle of the filament entry.
+  * The filament is not being cut by the cutter - Replace the blade. Increase the number of cutting attempts.
+  * The filament gets stuck at the entrance of the extruder - Change the filament cutting angle. Upgrade your biqu h2 v2 by installing a ptfe tube between the gears to reduce gaps, [instructions](https://m.youtube.com/watch?v=L_tcQAx7UfE).
 ____________________
 
 # Material Switching Unit (MSU)
