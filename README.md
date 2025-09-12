@@ -37,14 +37,14 @@ ____________________
 2. Gather
 3. Connect the motors according to the table.
 
-| Motor | Origin port | MSU |
+|  Motor  |  Origin port  |  MSU  |
 | ------------- | ------------- | ------------- |
-| X | X-motor  | X-motor |
-| Y | Y-motor  | Y-motor |
-| Z1 | Z1-motor  | Z1-motor |
-| E | E0-motor  | E1-motor |
-| Z2 | E1-motor  | E0-motor |
-| MSU E |   | E2-motor |
+|  X  |  X-motor  | X-motor |
+|  Y  |  Y-motor  | Y-motor |
+|  Z1 | Z1-motor  | Z1-motor |
+|  E  | E0-motor  | E1-motor |
+|  Z2 | E1-motor  | E0-motor |
+|  MSU E |   | E2-motor |
 
 4. Compile the firmware with the necessary settings and install the firmware..
 5. Be prepared for problems
